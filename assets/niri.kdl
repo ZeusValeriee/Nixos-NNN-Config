@@ -1,0 +1,91 @@
+prefer-no-csd
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+    }
+}
+
+spawn-at-startup "noctalia"
+spawn-at-startup "swaybg" "-i" "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg" "-m" "fill"
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+binds {
+    // Application launchers
+    Mod+Return { spawn "ghostty"; }
+    Mod+T { spawn "ghostty"; }
+    Mod+E { spawn "nautilus"; }
+    Mod+W { spawn "firefox"; }
+    
+    // Noctalia UI
+    Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+Tab { spawn-sh "noctalia msg window-switcher"; }
+    Mod+Period { spawn-sh "noctalia msg panel-toggle liamwh/emoji-picker:desktop"; }
+    Mod+Shift+N { spawn-sh "noctalia msg panel-toggle noctalia/notes:panel"; }
+    Mod+Shift+Slash { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
+
+    // Noctalia specific binds
+    Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Shift+V { spawn-sh "noctalia msg clipboard-clear"; }
+    Mod+Y { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+N { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+    Mod+X { spawn-sh "noctalia msg panel-toggle session"; }
+    Ctrl+Alt+Delete { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+Escape { spawn-sh "noctalia msg panel-toggle control-center system"; }
+    
+    // Hardware / Fn Keys
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    XF86Launch6 { spawn-sh "noctalia msg mic-mute"; }
+
+    // Window management
+    Mod+C { center-window; }
+    Mod+Q { close-window; }
+    Mod+O { toggle-overview; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+E { quit; }
+    Print { screenshot; }
+
+    // Navigation
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+
+    // Workspaces
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}

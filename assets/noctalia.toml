@@ -1,0 +1,141 @@
+[bar.default]
+center = [ "session", "clock" ]
+end = [ "network", "volume", "brightness", "battery", "bar" ]
+start = [ "launcher", "workspaces" ]
+
+[dock]
+background_opacity = 1.0
+enabled = true
+pinned = [ "firefox", "writer", "impress", "calc", "codium", "com.mitchellh.ghostty", "org.gnome.Nautilus" ]
+reserve_space = false
+show_dots = true
+smart_auto_hide = true
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0001220703125
+    cy = 897.99993896484375
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[notification]
+background_opacity = 1.0
+position = "bottom_center"
+
+[osd]
+background_opacity = 1.0
+position = "bottom_center"
+
+[plugins]
+enabled = [ "liamwh/emoji-picker", "noctalia/notes", "raycursive/niri-displays" ]
+
+[shell]
+font_family = "DejaVu Sans"
+
+    [shell.greeter_sync]
+    auto_sync = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = false
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "destructive"
+
+[theme]
+community_palette = "Rosey AMOLED"
+custom_palette = "stylix"
+mode = "dark"
+source = "custom"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "ghostty", "niri" ]
+    community_ids = [ "brave-origin", "discord", "telegram", "darktable", "lazyvim", "obsidian", "obs", "thunderbird", "lazygit" ]
+
+[wallpaper.default]
+path = "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg"
+
+[wallpaper.last]
+path = "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg"
+
+[widget.bar]
+show_resolution = false
+type = "raycursive/niri-displays:bar"
+
+[widget.brightness]
+show_label = false
+
+[widget.network]
+show_label = false
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+show_labels = false
