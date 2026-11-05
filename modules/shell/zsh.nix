@@ -64,6 +64,9 @@ in
         grep = "rg";
         top = "btop";
         du = "dust";
+        gc = "sudo nix-collect-garbage -d";
+        optimise = "sudo nix store optimise";
+        cleanup = "sudo nix-collect-garbage -d && sudo nix store optimise";
       };
     };
   };

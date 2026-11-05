@@ -23,6 +23,8 @@
       librecad
       freecad
       kicad
+      libredwg
+      # odafileconverter
       # computations
       octaveFull
       pspp

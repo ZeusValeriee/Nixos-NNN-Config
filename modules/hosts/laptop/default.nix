@@ -54,6 +54,7 @@ in
       stylix
       # services
       ollama
+      flatpak
       # shell
       zsh
       # packages

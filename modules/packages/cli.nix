@@ -37,6 +37,7 @@
         ipython
         ptpython
         python-lsp-server
+        lxml
       ]))
       uv
       poetry
