@@ -16,6 +16,10 @@ input {
     }
 }
 
+output "eDP-1" {
+    mode "1920x1080@60.018"
+}
+
 spawn-at-startup "noctalia"
 spawn-at-startup "swaybg" "-i" "/home/angelo/Pictures/Wallpapers/astronaut-nord.png" "-m" "fill"
 

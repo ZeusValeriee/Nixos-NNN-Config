@@ -5,7 +5,7 @@ order = [ "default" ]
     capsule = true
     center = [ "session", "clock" ]
     concave_edge_corners = false
-    end = [ "network", "volume", "brightness", "battery", "bar" ]
+    end = [ "network", "volume", "brightness", "battery" ]
     margin_edge = 5
     margin_ends = 10
     start = [ "launcher", "workspaces" ]
@@ -71,13 +71,16 @@ background_opacity = 1.0
 position = "bottom_center"
 
 [plugins]
-enabled = [ "liamwh/emoji-picker", "noctalia/notes", "raycursive/niri-displays" ]
+enabled = [ "liamwh/emoji-picker", "noctalia/notes" ]
 
 [shell]
 font_family = "DejaVu Sans"
 
     [shell.greeter_sync]
     auto_sync = true
+
+    [shell.launcher]
+    sort_by_usage = false
 
     [shell.panel]
     session_placement = "floating"
