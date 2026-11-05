@@ -67,6 +67,8 @@ in
         gc = "sudo nix-collect-garbage -d";
         optimise = "sudo nix store optimise";
         cleanup = "sudo nix-collect-garbage -d && sudo nix store optimise";
+        hz60 = "niri msg output eDP-1 mode '1920x1080@60.018'";
+        hz144 = "niri msg output eDP-1 mode '1920x1080@144.002'";
       };
     };
   };
