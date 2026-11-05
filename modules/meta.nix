@@ -27,8 +27,8 @@
     fan.nbfcConfigId = null;
 
     theme = {
-      scheme = "sequoia-monochrome-light";
-      polarity = "light";
+      scheme = "nord";
+      polarity = "dark";
       cursor = {
         name = "Bibata-Modern-Ice";
         size = 24;

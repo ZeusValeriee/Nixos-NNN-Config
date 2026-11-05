@@ -1,12 +1,22 @@
-[bar.default]
-center = [ "session", "clock" ]
-end = [ "network", "volume", "brightness", "battery", "bar" ]
-start = [ "launcher", "workspaces" ]
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    capsule = true
+    center = [ "session", "clock" ]
+    concave_edge_corners = false
+    end = [ "network", "volume", "brightness", "battery", "bar" ]
+    margin_edge = 5
+    margin_ends = 10
+    start = [ "launcher", "workspaces" ]
 
 [dock]
 background_opacity = 1.0
+concave_edge_corners = false
 enabled = true
 pinned = [ "firefox", "writer", "impress", "calc", "codium", "com.mitchellh.ghostty", "org.gnome.Nautilus" ]
+position = "left"
+radius = 10
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
@@ -69,40 +79,48 @@ font_family = "DejaVu Sans"
     [shell.greeter_sync]
     auto_sync = true
 
-    [[shell.session.actions]]
-    action = "lock"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "1"
-    variant = "default"
+    [shell.panel]
+    session_placement = "floating"
+    session_position = "center"
 
-    [[shell.session.actions]]
-    action = "logout"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "2"
-    variant = "default"
+    [shell.session]
+    grid = true
+    grid_columns = 2
 
-    [[shell.session.actions]]
-    action = "lock_and_suspend"
-    countdown_seconds = 0.0
-    enabled = false
-    shortcut = "3"
-    variant = "default"
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "reboot"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "3"
-    variant = "default"
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "shutdown"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "4"
-    variant = "destructive"
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = false
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "destructive"
 
 [theme]
 community_palette = "Rosey AMOLED"
@@ -116,13 +134,13 @@ wallpaper_scheme = "m3-content"
     community_ids = [ "brave-origin", "discord", "telegram", "darktable", "lazyvim", "obsidian", "obs", "thunderbird", "lazygit" ]
 
 [wallpaper.default]
-path = "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg"
+path = "/home/angelo/Pictures/Wallpapers/astronaut-nord.png"
 
 [wallpaper.last]
-path = "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg"
+path = "/home/angelo/Pictures/Wallpapers/astronaut-nord.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg"
+path = "/home/angelo/Pictures/Wallpapers/astronaut-nord.png"
 
 [widget.bar]
 show_resolution = false

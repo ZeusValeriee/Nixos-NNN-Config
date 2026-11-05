@@ -17,11 +17,17 @@ input {
 }
 
 spawn-at-startup "noctalia"
-spawn-at-startup "swaybg" "-i" "/home/angelo/Pictures/Wallpapers/white_yinyang.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/angelo/Pictures/Wallpapers/astronaut-nord.png" "-m" "fill"
 
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
+}
+
+// Add rounded corners to all windows
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
 }
 
 binds {
