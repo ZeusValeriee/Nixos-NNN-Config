@@ -50,6 +50,7 @@
       audacity
       ardour
       lmms
+      upscayl
       kdePackages.kdenlive
       shotcut
       # gtk

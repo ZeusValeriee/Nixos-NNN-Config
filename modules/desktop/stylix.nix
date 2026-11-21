@@ -9,7 +9,7 @@ in
     stylix = {
       enable = true;
       autoEnable = true;
-      inherit (theme) polarity;
+      polarity = "dark"; 
       base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme.scheme}.yaml";
       cursor = {
         package = pkgs.bibata-cursors;
@@ -29,10 +29,12 @@ in
       };
     };
 
+    # Required for GTK apps to read the dark mode preference
     programs.dconf.enable = true;
   };
 
   flake.modules.homeManager.stylix = {
+    stylix.autoEnable = true; 
     stylix.targets = {
       gtk.enable = true;
       qt.enable = true;

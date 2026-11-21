@@ -21,7 +21,7 @@ output "eDP-1" {
 }
 
 spawn-at-startup "noctalia"
-spawn-at-startup "swaybg" "-i" "/home/angelo/Pictures/Wallpapers/astronaut-nord.png" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/angelo/Pictures/Wallpapers/nord-shards.jpg" "-m" "fill"
 
 layer-rule {
     match namespace="^wallpaper$"

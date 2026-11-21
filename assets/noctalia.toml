@@ -37,7 +37,7 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 196.0
     box_width = 810.0
-    cx = 960.0001220703125
+    cx = 960.00012207031239
     cy = 897.99993896484375
     output = "eDP-1"
     placement_height = 1080.0
@@ -126,9 +126,10 @@ font_family = "DejaVu Sans"
         variant = "destructive"
 
 [theme]
+builtin = "Gruvbox"
 community_palette = "Rosey AMOLED"
 custom_palette = "stylix"
-mode = "dark"
+mode = "light"
 source = "custom"
 wallpaper_scheme = "m3-content"
 
@@ -137,13 +138,13 @@ wallpaper_scheme = "m3-content"
     community_ids = [ "brave-origin", "discord", "telegram", "darktable", "lazyvim", "obsidian", "obs", "thunderbird", "lazygit" ]
 
 [wallpaper.default]
-path = "/home/angelo/Pictures/Wallpapers/astronaut-nord.png"
+path = "/home/angelo/Pictures/Wallpapers/nord-shards.jpg"
 
 [wallpaper.last]
-path = "/home/angelo/Pictures/Wallpapers/astronaut-nord.png"
+path = "/home/angelo/Pictures/Wallpapers/nord-shards.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/angelo/Pictures/Wallpapers/astronaut-nord.png"
+path = "/home/angelo/Pictures/Wallpapers/nord-shards.jpg"
 
 [widget.bar]
 show_resolution = false
