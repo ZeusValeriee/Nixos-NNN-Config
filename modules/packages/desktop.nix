@@ -7,7 +7,7 @@
     home.packages = with pkgs; [
       # browser
       firefox
-      brave-origin
+      google-chrome
       # internet
       thunderbird
       telegram-desktop
